@@ -1,0 +1,87 @@
+@import "../../styles/mixins.scss";
+* {
+  padding: 0;
+  margin: 0;
+}
+.container {
+  .container__center {
+    justify-content: center;
+    margin-top: 100px;
+    display: flex;
+    gap: 30px;
+    .center__features {
+      //   max-width: 23 0.333333%;
+      width: 350px;
+      height: 452px;
+      @include respons(tab-port) {
+        width: 300px;
+        height: auto;
+      }
+      .features__icon {
+        border-radius: 5px;
+        padding: 30px 30px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.251);
+        .icon__item {
+          //   display: flex;
+          .item__left {
+            font-size: 100px;
+            font-weight: 600;
+            color: #fdefe9;
+          }
+          .item__shadow {
+            .shadow__row {
+              img {
+                margin-left: 100px;
+                top: 15px;
+                left: 45px;
+                width: 30%;
+                margin-top: -90px;
+              }
+            }
+            .shadow__col {
+              margin-top: 20px;
+              font-size: 22px;
+              color: #1e1e1e;
+              margin-bottom: 25px;
+              text-align: center;
+            }
+            .shadow__block {
+              font-size: 15px;
+              line-height: 25px;
+              color: #888;
+              text-align: center;
+            }
+            .shadow__width {
+              margin-top: 35px;
+              text-align: center;
+              //   display: inline-block;
+              .width__nav {
+                font-size: 14px;
+                border-radius: 25px;
+                padding: 15px 25px;
+                background-color: #f4813f;
+                text-transform: uppercase;
+                color: #fff;
+                font-weight: 600;
+                letter-spacing: 1px;
+                transition: all 0.3s ease 0s;
+                border: #f4813f;
+                &:hover {
+                  background-color: #f1556a;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include respons(tab-port) {
+    .container__center {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin-top: 50px;
+    }
+  }
+}

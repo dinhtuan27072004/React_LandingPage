@@ -1,0 +1,157 @@
+@import "../../styles/mixins.scss";
+* {
+  padding: 0;
+  margin: 0;
+}
+.wrapper {
+  background-image: url(../../assets/footer-bg.png);
+  //   margin-top: 100px;
+  padding-top: 545px;
+  background-repeat: no-repeat;
+  // background-position: center center;
+  background-size: cover;
+  //   width: 100%;
+  .wrapper__footer {
+    margin-top: -20rem;
+    .footer__rounded {
+      .rounded__inline {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        .inline__effect {
+          position: relative;
+          z-index: 10;
+          padding: 45px;
+          border-radius: 5px;
+          background-color: #fff;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+          .effect__input {
+            display: flex;
+            gap: 20px;
+            input {
+              color: #777;
+              font-size: 13px;
+              border: 1px solid #eee;
+              background-color: #f7f7f7;
+              border-radius: 5px;
+              width: 100%;
+              height: 50px;
+              outline: none;
+              padding-left: 20px;
+              padding-right: 20px;
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              appearance: none;
+              margin-bottom: 30px;
+            }
+          }
+          .effect__message textarea {
+            color: #777;
+            font-size: 13px;
+            border: 1px solid #eee;
+            background-color: #f7f7f7;
+            border-radius: 5px;
+            width: 90%;
+            outline: none;
+            margin-bottom: 30px;
+            resize: none;
+            height: 150px;
+            padding: 20px;
+          }
+          .effect__button {
+            button {
+              outline: none;
+              border: none;
+              cursor: pointer;
+              font-size: 14px;
+              border-radius: 25px;
+              padding: 15px 25px;
+              background-color: #f4813f;
+              text-transform: uppercase;
+              color: #fff;
+              font-weight: 600;
+              letter-spacing: 1px;
+              -webkit-transition: all 0.3s ease 0s;
+              -moz-transition: all 0.3s ease 0s;
+              -o-transition: all 0.3s ease 0s;
+              transition: all 0.3s ease 0s;
+              &:hover {
+                background-color: #f1156a;
+              }
+            }
+          }
+        }
+        .inline__row {
+          align-self: center;
+          .row__margin {
+            margin-top: 0px;
+            margin-bottom: 30px;
+            font-size: 42px;
+            text-transform: capitalize;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #fff;
+            span {
+              color: #fba70b;
+              font-style: normal;
+            }
+          }
+          .row__left {
+            color: #fff;
+            font-size: 16px;
+            margin-bottom: 30px;
+            line-height: 25px;
+          }
+          .row__right {
+            color: #fff;
+            font-size: 16px;
+            margin-bottom: 30px;
+            line-height: 25px;
+          }
+          .row__icon {
+            display: flex;
+            gap: 20px;
+            .iocn__facebook {
+              // font-weight: bolder;
+              font-size: 20px;
+              color: #fff;
+              border-radius: 50px;
+              border: 1px solid #f7f7f7;
+              width: 40px;
+              height: 40px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              &:hover {
+                background: #ffa600be;
+                color: #ffffff77;
+              }
+              svg {
+                color: #eee;
+                width: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+    @include respons(tab-port) {
+      .rounded__inline {
+        flex-direction: column;
+        text-align: center;
+      }
+      .effect__input {
+        flex-direction: column;
+      }
+    }
+
+    .footer__static {
+      .static__nav {
+        padding: 60px 0px;
+        border-top: 1px solid rgba(250, 250, 250, 0.3);
+        text-align: center;
+        color: #fff;
+      }
+    }
+  }
+}

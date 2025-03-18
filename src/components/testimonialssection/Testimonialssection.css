@@ -1,0 +1,144 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container .container__none {
+  background-image: url(../../assets/right.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  width: 100%;
+  display: inline-block;
+  height: 100%;
+}
+.container .container__none .none__rounded {
+  padding-top: 100px;
+}
+.container .container__none .none__rounded .rounded__static {
+  margin-top: 0px;
+  text-align: center;
+  font-size: 42px;
+  font-weight: 700;
+  color: #1e1e1e;
+  margin-bottom: 25px;
+}
+.container .container__none .none__rounded .rounded__static span {
+  font-style: normal;
+  color: #f4813f;
+}
+.container .container__none .none__rounded .rounded__fixed {
+  font-size: 15px;
+  color: #888;
+  text-align: center;
+}
+.container .container__none .none__weight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 30px;
+}
+.container .container__none .none__weight .weight__border {
+  overflow: hidden;
+}
+.container .container__none .none__weight .weight__border .border__container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 20px;
+}
+.container .container__none .none__weight .weight__border .border__opacity {
+  flex: 0 0 49%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 100px;
+}
+.container .container__none .none__weight .weight__border .border__opacity .opacity__img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: -35px;
+  margin-right: 36rem;
+  z-index: 9;
+}
+.container .container__none .none__weight .weight__border .border__opacity .opacity__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container .container__none .none__weight .weight__border .border__opacity .opacity__review {
+  background: linear-gradient(145deg, rgb(244, 129, 63) 0%, rgb(241, 85, 106) 100%);
+  padding: 50px 40px;
+  text-align: center;
+  border-radius: 10px;
+  max-width: 500px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+.container .container__none .none__weight .weight__border .border__opacity .opacity__review .review__top .top__grid {
+  font-size: 30px;
+  color: #fff;
+}
+.container .container__none .none__weight .weight__border .border__opacity .opacity__review .review__top .top__flex {
+  font-size: 22px;
+  margin-top: 20px;
+  color: #fff;
+}
+.container .container__none .none__weight .weight__border .border__opacity .opacity__review .review__top .top__block {
+  color: #fff;
+  font-style: italic;
+  font-weight: 200;
+  margin: 20px 0px 15px 0px;
+}
+.container .container__none .none__weight .weight__border .border__opacity .opacity__review .review__top .top__fixed {
+  color: #fff;
+  font-weight: 200;
+  font-size: 13px;
+}
+.container .container__none .none__weight .weight__button {
+  display: flex;
+}
+.container .container__none .none__weight .weight__button .button__nav .nav__left {
+  border-radius: 10px;
+  font-size: 46px;
+  color: #fff;
+  width: 80px;
+  line-height: 80px;
+  text-align: center;
+  display: inline-block;
+  border: 1px solid rgb(244, 129, 63);
+  background: linear-gradient(145deg, rgb(244, 129, 63) 0%, rgb(241, 85, 106) 100%);
+}
+.container .container__none .none__weight .weight__button .button__item {
+  margin-top: 50px;
+  margin-left: -20px;
+}
+.container .container__none .none__weight .weight__button .button__item .item__right {
+  border-radius: 10px;
+  font-size: 46px;
+  color: #fff;
+  width: 80px;
+  line-height: 80px;
+  text-align: center;
+  display: inline-block;
+  border: 1px solid rgb(244, 129, 63);
+  background: linear-gradient(145deg, rgb(244, 129, 63) 0%, rgb(241, 85, 106) 100%);
+}
+
+@media screen and (max-width: 56.25em) {
+  .weight__border {
+    overflow: hidden;
+    width: 100%;
+  }
+  .weight__border .border__container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 400%; /* Vẫn trượt qua 4 đánh giá */
+  }
+  .weight__border .border__opacity {
+    flex: 0 0 100%; /* Chỉ hiển thị 1 phần tử tại một thời điểm */
+  }
+}/*# sourceMappingURL=Testimonialssection.css.map */

@@ -1,0 +1,94 @@
+@import "../../styles/mixins.scss";
+* {
+  padding: 0;
+  margin: 0;
+}
+.container {
+  .container__primary {
+    background-image: url(../../assets/left-bg-decor.png);
+    background-repeat: no-repeat;
+    // position: absolute;
+    width: 100%;
+    display: inline-block;
+    // height: 110%;
+    // margin-top: 100px;
+    .primary__fixed {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 100px;
+      margin-top: 100px;
+      gap: 80px;
+
+      .fixed__secondary {
+        .secondary__top {
+          display: flex;
+          gap: 30px;
+          margin-bottom: 20px;
+
+          .top__hidden {
+            .hidden__left {
+              font-size: 22px;
+              color: #1e1e1e;
+              margin-bottom: 15px;
+              margin-top: 3px;
+            }
+            .hidden__right {
+              font-size: 15px;
+              line-height: 25px;
+              color: #888;
+              span {
+                color: #007bff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include respons(tab-port) {
+  .primary__fixed {
+    flex-direction: column; // Chuyển sang dạng cột cho mobile
+    padding: 50px;
+    gap: 40px;
+    margin-top: 50px;
+  }
+
+  .fixed__img {
+    text-align: center;
+    img {
+      max-width: 80%; // Giảm kích thước hình ảnh
+      height: auto;
+    }
+  }
+
+  .fixed__secondary {
+    text-align: center; // Căn giữa nội dung text
+    .secondary__top {
+      display: flex;
+      // flex-direction: column; // Đổi bố cục hàng ngang thành cột
+      gap: 15px;
+
+      justify-content: center;
+
+      .top__muted {
+        img {
+          max-width: 50px; // Thu nhỏ icon
+        }
+      }
+
+      .top__hidden {
+        align-self: center;
+        .hidden__left {
+          font-size: 18px;
+        }
+
+        .hidden__right {
+          font-size: 14px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+}

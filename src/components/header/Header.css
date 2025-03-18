@@ -1,0 +1,179 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container__header {
+  width: 100%;
+  height: 100vh;
+  min-height: 793px;
+  background-image: url(../../assets/banner-bg.png);
+  background-repeat: no-repeat;
+  background-position: right top;
+  position: relative;
+}
+.container__header .header__nav {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: rgb(255, 255, 255);
+}
+.container__header .header__nav .nav__logo {
+  color: #191a20;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  float: left;
+  transition: all 0.3s ease 0s;
+}
+.container__header .header__nav .nav__menu {
+  display: flex;
+  gap: 40px;
+  font-size: 13px;
+  color: #7a7a7a;
+}
+.container__header .header__nav .menu__home {
+  color: #fba70b;
+}
+.container__header .header__nav .menu__about:hover {
+  color: #fba70b;
+}
+.container__header .header__nav .menu__testimonials .testimonials__item {
+  text-decoration: none;
+}
+.container__header .header__nav .menu__drop:hover {
+  color: #fba70b;
+}
+.container__header .header__nav .menu__contact:hover {
+  color: #fba70b;
+}
+.container__header .header__button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  padding: 240px;
+}
+.container__header .header__button .button__card {
+  font-weight: 900;
+  font-size: 52px;
+  line-height: 80px;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  color: #191a20;
+}
+.container__header .header__button .button__card .card__title {
+  color: #fba70b;
+}
+.container__header .header__button .button__item {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+.container__header .header__button .button__item .item__form {
+  color: #1e88e5;
+  font-weight: bold;
+  cursor: pointer;
+}
+.container__header .header__button .button__primary button {
+  background: #fba70b;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.container__header .header__button .button__primary button:hover {
+  background: #f1556a;
+}
+
+.container__header {
+  width: 100%;
+  height: 100vh;
+  min-height: 793px;
+  background-image: url(../../assets/banner-bg.png);
+  background-repeat: no-repeat;
+  background-position: right top;
+  position: relative;
+}
+.container__header .header__nav {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: rgb(255, 255, 255);
+}
+.container__header .header__nav .nav__logo {
+  color: #191a20;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.container__header .header__nav .nav__icon {
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+}
+.container__header .header__nav .nav__menu {
+  display: flex;
+  gap: 40px;
+  font-size: 13px;
+  color: #7a7a7a;
+}
+.container__header .header__nav .menu__home {
+  color: #fba70b;
+}
+.container__header .header__nav .menu__about:hover,
+.container__header .header__nav .menu__drop:hover,
+.container__header .header__nav .menu__contact:hover {
+  color: #fba70b;
+}
+
+@media screen and (max-width: 56.25em) {
+  .header__nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+    width: 100%;
+  }
+  .header__nav .nav__icon {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+  .header__nav .nav__menu {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    text-align: center;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  .header__nav .nav__menu.active {
+    display: flex;
+  }
+}/*# sourceMappingURL=Header.css.map */

@@ -1,0 +1,180 @@
+@import "../../styles/mixins.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  .container__none {
+    background-image: url(../../assets/right.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    width: 100%;
+    display: inline-block;
+    height: 100%;
+
+    .none__rounded {
+      padding-top: 100px;
+
+      .rounded__static {
+        margin-top: 0px;
+        text-align: center;
+        font-size: 42px;
+        font-weight: 700;
+        color: #1e1e1e;
+        margin-bottom: 25px;
+
+        span {
+          font-style: normal;
+          color: #f4813f;
+        }
+      }
+
+      .rounded__fixed {
+        font-size: 15px;
+        color: #888;
+        text-align: center;
+      }
+    }
+
+    .none__weight {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin-top: 30px;
+
+      .weight__border {
+        overflow: hidden;
+        .border__container {
+          display: flex;
+          transition: transform 0.5s ease-in-out;
+          gap: 20px;
+        }
+
+        .border__opacity {
+          flex: 0 0 49%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding-bottom: 100px;
+
+          .opacity__img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: -35px;
+            margin-right: 36rem;
+            z-index: 9;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+
+          .opacity__review {
+            background: linear-gradient(
+              145deg,
+              rgba(244, 129, 63, 1) 0%,
+              rgba(241, 85, 106, 1) 100%
+            );
+            padding: 50px 40px;
+            text-align: center;
+            border-radius: 10px;
+            // width: 100%;
+            max-width: 500px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1;
+            .review__top {
+              .top__grid {
+                font-size: 30px;
+                color: #fff;
+              }
+              .top__flex {
+                font-size: 22px;
+                margin-top: 20px;
+                color: #fff;
+              }
+              .top__block {
+                color: #fff;
+                font-style: italic;
+                font-weight: 200;
+                margin: 20px 0px 15px 0px;
+              }
+              .top__fixed {
+                color: #fff;
+                font-weight: 200;
+                font-size: 13px;
+              }
+            }
+          }
+        }
+      }
+
+      .weight__button {
+        display: flex;
+
+        .button__nav {
+          .nav__left {
+            border-radius: 10px;
+            font-size: 46px;
+            color: #fff;
+
+            width: 80px;
+
+            line-height: 80px;
+            text-align: center;
+            display: inline-block;
+            border: 1px solid rgb(244, 129, 63);
+            background: linear-gradient(
+              145deg,
+              rgba(244, 129, 63, 1) 0%,
+              rgba(241, 85, 106, 1) 100%
+            );
+          }
+        }
+
+        .button__item {
+          margin-top: 50px;
+          margin-left: -20px;
+          .item__right {
+            border-radius: 10px;
+            font-size: 46px;
+            color: #fff;
+
+            width: 80px;
+
+            line-height: 80px;
+            text-align: center;
+            display: inline-block;
+            border: 1px solid rgb(244, 129, 63);
+            background: linear-gradient(
+              145deg,
+              rgba(244, 129, 63, 1) 0%,
+              rgba(241, 85, 106, 1) 100%
+            );
+          }
+        }
+      }
+    }
+  }
+}
+@include respons(tab-port) {
+  .weight__border {
+    overflow: hidden;
+    width: 100%;
+
+    .border__container {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 400%; /* Vẫn trượt qua 4 đánh giá */
+    }
+
+    .border__opacity {
+      flex: 0 0 100%; /* Chỉ hiển thị 1 phần tử tại một thời điểm */
+    }
+  }
+}
