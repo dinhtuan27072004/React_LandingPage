@@ -43,20 +43,28 @@
     }
     .menu__home {
       color: #fba70b;
+      cursor: pointer;
     }
     .menu__about:hover {
       color: #fba70b;
+      cursor: pointer;
     }
     .menu__testimonials {
+      a {
+        text-decoration: none !important;
+        color: #7a7a7a;
+      }
       .testimonials__item {
         text-decoration: none;
       }
     }
     .menu__drop:hover {
       color: #fba70b;
+      cursor: pointer;
     }
     .menu__contact:hover {
       color: #fba70b;
+      cursor: pointer;
     }
   }
 
@@ -153,6 +161,12 @@
       gap: 40px;
       font-size: 13px;
       color: #7a7a7a;
+      margin-left: 15%;
+      text-transform: uppercase;
+      background: #ffffff;
+      padding: 0 20px;
+      height: 40px;
+      align-items: center;
     }
 
     .menu__home {

@@ -1,4 +1,6 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import CSS của AOS
 import "./Testimonialssection.scss";
 import img from "../../assets/testimonial-author-1.png";
 
@@ -47,6 +49,10 @@ const Testimonialssection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(true);
 
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true }); // Khởi tạo AOS
+  }, []);
+
   const handleNext = () => {
     if (currentIndex >= testimonials.length) {
       setIsTransitioning(false);
@@ -74,13 +80,13 @@ const Testimonialssection = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container" data-aos="fade-up">
       <div className="container__none">
         <div className="none__rounded">
           <div className="rounded__static">
             What They Think <span>About Us</span>
           </div>
-          <div className="rounded__fixed">
+          <div className="rounded__fixed" data-aos="fade-up">
             Suspendisse vitae laoreet mauris. Fusce a nisi dapibus, euismod
             purus non, convallis odio. Donec vitae magna ornare, pellentesque ex
             vitae, aliquet urna.
@@ -97,9 +103,10 @@ const Testimonialssection = () => {
                   ? "transform 0.5s ease-in-out"
                   : "none",
               }}
+              data-aos="fade-right"
             >
               {extendedTestimonials.map((testimonial, index) => (
-                <div className="border__opacity" key={index}>
+                <div className="border__opacity" key={index} data-aos="zoom-in">
                   <div className="opacity__img">
                     <img src={testimonial.img} alt={testimonial.name} />
                   </div>
@@ -116,7 +123,7 @@ const Testimonialssection = () => {
             </div>
           </div>
 
-          <div className="weight__button">
+          <div className="weight__button" data-aos="fade-up">
             <div className="button__nav">
               <button className="nav__left" onClick={handlePrev}>
                 &#8249;

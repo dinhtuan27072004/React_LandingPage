@@ -1,39 +1,48 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import CSS của AOS
 import "./Footersection.scss";
 
 const Footersection = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 }); // Khởi tạo AOS với thời gian hiệu ứng là 1 giây
+  }, []);
+
   return (
-    <div className="wrapper">
+    <div className="wrapper" data-aos="fade-up">
       <div className="wrapper__footer">
-        <div className=" footer__rounded">
+        <div className="footer__rounded" data-aos="zoom-in">
           <div className="rounded__inline">
             <div className="inline__effect">
-              <div className="effect__input">
+              <div className="effect__input" data-aos="fade-right">
                 <input type="text" placeholder="FULL NAME" required />
                 <input type="email" placeholder="E-mail Address" required />
               </div>
-              <div className="effect__message">
+              <div className="effect__message" data-aos="fade-left">
                 <textarea placeholder="Your Message" required></textarea>
               </div>
-              <div className="effect__button">
+              <div className="effect__button" data-aos="flip-up">
                 <button type="submit">SEND MESSAGE NOW</button>
               </div>
             </div>
             <div className="inline__row">
-              <div className="row__margin">
+              <div className="row__margin" data-aos="fade-down">
                 More About <span>Lava</span>
               </div>
-              <div className="row__left">
+              <div className="row__left" data-aos="fade-right">
                 Phasellus dapibus urna vel lacus accumsan, iaculis eleifend leo
-                auctor. <br /> Duis at finibus odio. Vivamus ut pharetra arcu,
-                in porta metus. <br /> Suspendisse blandit pulvinar ligula ut
-                elementum.
+                auctor. <br />
+                Duis at finibus odio. Vivamus ut pharetra arcu, in porta metus.{" "}
+                <br />
+                Suspendisse blandit pulvinar ligula ut elementum.
               </div>
-              <div className="row__right">
+              <div className="row__right" data-aos="fade-left">
                 If you need this contact form to send email to your inbox, you
-                may <br /> follow our contact page for more detail.
+                may <br />
+                follow our contact page for more detail.
               </div>
-              <div className="row__icon">
-                <div className="iocn__facebook">
+              <div className="row__icon" data-aos="zoom-in">
+                <div className="icon__facebook">
                   <svg
                     width="24px"
                     height="24px"
@@ -52,7 +61,7 @@ const Footersection = () => {
                     ></path>
                   </svg>
                 </div>
-                <div className="iocn__facebook">
+                <div className="icon__facebook">
                   <svg
                     width="24px"
                     height="24px"
@@ -71,8 +80,8 @@ const Footersection = () => {
                     ></path>
                   </svg>
                 </div>
-                <div className="iocn__facebook">in</div>
-                <div className="iocn__facebook">
+                <div className="icon__facebook">in</div>
+                <div className="icon__facebook">
                   <svg
                     width="24px"
                     height="24px"
@@ -112,7 +121,7 @@ const Footersection = () => {
                     ></path>
                   </svg>
                 </div>
-                <div className="iocn__facebook">
+                <div className="icon__facebook">
                   <svg
                     width="24px"
                     height="24px"
@@ -156,8 +165,7 @@ const Footersection = () => {
             </div>
           </div>
         </div>
-        <br />
-        <div className=" footer__static">
+        <div className="footer__static" data-aos="fade-up">
           <div className="static__nav">
             Copyright © 2020 Lava Landing Page | Designed by TemplateMo
           </div>

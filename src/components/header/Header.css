@@ -42,18 +42,26 @@
 }
 .container__header .header__nav .menu__home {
   color: #fba70b;
+  cursor: pointer;
 }
 .container__header .header__nav .menu__about:hover {
   color: #fba70b;
+  cursor: pointer;
+}
+.container__header .header__nav .menu__testimonials a {
+  text-decoration: none !important;
+  color: #7a7a7a;
 }
 .container__header .header__nav .menu__testimonials .testimonials__item {
   text-decoration: none;
 }
 .container__header .header__nav .menu__drop:hover {
   color: #fba70b;
+  cursor: pointer;
 }
 .container__header .header__nav .menu__contact:hover {
   color: #fba70b;
+  cursor: pointer;
 }
 .container__header .header__button {
   display: flex;
@@ -137,6 +145,12 @@
   gap: 40px;
   font-size: 13px;
   color: #7a7a7a;
+  margin-left: 15%;
+  text-transform: uppercase;
+  background: #ffffff;
+  padding: 0 20px;
+  height: 40px;
+  align-items: center;
 }
 .container__header .header__nav .menu__home {
   color: #fba70b;

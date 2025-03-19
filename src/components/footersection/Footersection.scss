@@ -8,7 +8,7 @@
   //   margin-top: 100px;
   padding-top: 545px;
   background-repeat: no-repeat;
-  // background-position: center center;
+  // background-position: center center;icon__facebook
   background-size: cover;
   //   width: 100%;
   .wrapper__footer {
@@ -17,7 +17,8 @@
       .rounded__inline {
         display: flex;
         justify-content: center;
-        gap: 20px;
+        gap: 30px;
+        padding: 120px 0;
         .inline__effect {
           position: relative;
           z-index: 10;
@@ -59,6 +60,9 @@
             padding: 20px;
           }
           .effect__button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             button {
               outline: none;
               border: none;
@@ -111,7 +115,7 @@
           .row__icon {
             display: flex;
             gap: 20px;
-            .iocn__facebook {
+            .icon__facebook {
               // font-weight: bolder;
               font-size: 20px;
               color: #fff;
